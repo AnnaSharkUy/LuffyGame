@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LuffyGame — ВПР география 5 класс</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="screen-menu" class="screen active">
+      <div class="ship">⛵</div>
+      <h1>LUFFY GAME</h1>
+      <p class="subtitle">Подготовка к ВПР по географии · 5 класс</p>
+      <button class="btn primary" data-go="seas">Начать плавание!</button>
+      <button class="btn" data-go="about">Об игре</button>
+      <p class="authors">Авторы: В. Лаптев, Д. Пикулин, Я. Костюков<br>Куратор: Н. В. Воронцов</p>
+    </div>
+    <div id="screen-seas" class="screen">
+      <h1>Выбери море</h1>
+      <div id="sea-list"></div>
+      <button class="btn" data-go="menu">← Меню</button>
+      <p class="authors" id="seas-score"></p>
+    </div>
+    <div id="screen-quiz" class="screen">
+      <div class="topbar"><span id="quiz-sea"></span><span id="quiz-progress"></span></div>
+      <div class="panel"><p class="q-text" id="quiz-text"></p></div>
+      <div id="quiz-options"></div>
+      <div id="quiz-explain" class="explain" style="display:none"></div>
+      <button class="btn green" id="quiz-next" style="display:none">Следующий →</button>
+    </div>
+    <div id="screen-result" class="screen">
+      <h1 id="result-title"></h1>
+      <p class="score-big" id="result-score"></p>
+      <p class="msg" id="result-msg"></p>
+      <button class="btn primary" id="result-next">Следующее море</button>
+      <button class="btn" id="result-retry">Повторить</button>
+      <button class="btn" data-go="seas">Выбор моря</button>
+    </div>
+    <div id="screen-final" class="screen">
+      <div class="ship">🏴‍☠️</div>
+      <h1>Путешествие завершено!</h1>
+      <p class="score-big" id="final-score"></p>
+      <button class="btn primary" data-go="menu" id="final-menu">В меню</button>
+    </div>
+    <div id="screen-about" class="screen">
+      <h1>Об игре</h1>
+      <div class="panel">
+        <p>ВПР география 5 класс · сюжет One Piece · JS / Wick Editor</p>
+        <p>Источник: РЕШУ ВПР / ФИОКО</p>
+      </div>
+      <button class="btn" data-go="menu">← Назад</button>
+    </div>
+  </div>
+  <script src="js/questions.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>
